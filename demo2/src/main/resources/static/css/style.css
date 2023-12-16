@@ -1,0 +1,536 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Source+Sans+Pro:wght@600&family=Ubuntu:wght@500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    text-decoration: none;
+    text-transform:capitalize;
+    transition: 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Setting a standard padding of the content */
+section:not(.home){
+    padding: 3rem 7%;
+}
+
+.title{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    padding: 1.2rem 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    color: #130f40;
+}
+
+.title span{
+    color: goldenrod;
+    padding-left: 0.7rem;
+}
+
+/* Here I am doing some changes in the about page  */
+.heading{
+    background: url("images/Default_Real_Flower_bouquet_and_decorations_with_a_and_cake_a_0_f4f32430-82e3-4799-ab8a-40db56bd490f_1.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 12rem;
+    padding-bottom: 8rem;
+}
+.heading h1{
+    color: aliceblue;
+    font-size: 4rem;
+}
+.heading p{
+    padding-top: 1rem;
+    font-size: 2rem;
+    color: aliceblue;
+}
+.heading p a{
+    color: goldenrod;
+    padding-right: 0.5rem;
+}
+/* Making the standard way of how the button looks */
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 3rem;
+    border: .1rem solid #130f40;
+    border-radius: 0.5rem;
+    background: none;
+    color: #130f40;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover{
+    background: #130f40;
+    color: aliceblue;
+}
+/* Navbar and its look */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;right:0;
+    z-index: 1000;
+    background: whitesmoke;
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.header .logo i{
+    color: goldenrod;
+    padding-right: 0.5rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: #130f40;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: goldenrod;
+    font-size: 2.4rem;
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    color: #130f40;
+    cursor: pointer;   
+}
+
+.header .icons div:hover{
+    color: goldenrod;
+}
+
+.header .icons #menu{
+    display: none;
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 115%; right: -105%;
+    background: peachpuff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+    width: 35rem;
+    padding: 2rem;
+} 
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: 0.4s linear;
+
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    border: 1px solid #130f40;
+    border-radius: 6px;
+}
+
+.header .shopping-cart .box .fa-times{
+    position: absolute;
+    top: 50%; right: 2rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #130f40;
+    cursor: pointer;
+}
+
+.header .shopping-cart .box .fa-times:hover{
+    color: red;
+}
+
+.header .shopping-cart .box img{
+    height: 10rem;
+}
+
+.header .shopping-cart .box .content h3{
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+    color: #130f40;
+}
+.header .shopping-cart .box .content span{
+    font-size: 1.5rem;
+    color: dimgrey;
+}
+.header .shopping-cart .box .content span.multiply{
+    margin: 0.5rem;
+}
+
+.header .shopping-cart .total{
+    color: #130f40;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.header .shopping-cart .btn{
+    text-align: center;
+    width: 100%;
+}
+
+.header .login-form{
+    position: absolute;
+    top: 115%; right: -105%;
+    background: plum;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+    width: 35rem;
+    padding: 2rem;
+}
+
+.header .login-form.active{
+    right: 2rem;
+    transition: 0.4s linear;
+}
+
+.header .login-form h3{
+    color: #130f40;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+/* Mamking the fields  center and styling it */
+.header .login-form .box{
+    margin: 0.7rem 0;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.2rem;
+    text-transform: none;
+    width: 100%;
+    color: #130f40;
+    font-size: 1.5rem;
+}
+/* Making the remember me section as flex and making its size appropriate */
+.header .login-form .remember{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.7rem 0;
+}
+/* Making  the remember me size larger and lighter color*/
+.header .login-form .remember label{
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+/* Making the login button in cneter and width 100% */
+.header .login-form .btn{
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+/* End of header */
+/* Making the height of the slider appropriate and  setting the background to flex*/
+.home .slide{
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+/* Making the content inside the images to have appropriate width */
+.home .slide .content{
+    width: 60rem;
+    text-align: center;
+    display: none;
+}
+/* Styling the text .... make sure that the animations is leant  */
+.home .slide .content h3{
+    font-size: 6rem;
+    color: aliceblue;
+    line-height: 1.3;
+    padding: 2rem 0;
+    animation: sliderReveal 1s ease forwards;
+}
+/* Coloring the content */
+.home .slide .content h3 span{
+    color: goldenrod;
+}
+/* Making the button styled */
+.home .slide .content .btn{
+    background-color: #130f40;
+    color: aliceblue;
+
+}
+
+.home .swiper-slide-active .content{
+    display: inline-block;
+}
+
+.home .swiper-slide-active{
+    animation: smoothScale 4s linear forwards;
+}
+
+/* Making the animations of the text to appear from the bottom */
+@keyframes sliderReveal {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Making the animations of the background image to appear closer */
+@keyframes smoothScale {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.15);
+    }
+}
+
+/* making the carousel buttons as diagonal and styled */
+.swiper-button-prev,
+.swiper-button-next{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    margin-left: 1.5rem;
+    transform: translateY(-50%) rotate(45deg);
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+    color: goldenrod;
+}
+
+/* making the button pattern as diamond here */
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 1.5rem;
+    transform: rotate(-45deg);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    background: goldenrod;
+    color: #130f40;
+    font-weight: 900;
+}
+/* end of the carousel section here */
+
+/* Making all the cards into grid */
+.banner .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
+    gap: 2rem;
+}
+
+.banner .box-container .box{
+    /* border: 1px solid black; */
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: goldenrod;
+    border-radius: 8px;
+}
+
+.banner .box-container .box .image{
+    width: 100%;
+}
+
+.banner .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner .box-container .box .content{
+    padding: 2rem;
+}
+
+.banner .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: antiquewhite;
+    margin-bottom: 1rem;
+}
+
+/* The grid section ends here */
+
+/* The steps section starts from here */
+/* making the box container as flex display */
+.steps .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    
+}
+
+.steps .box-container .box{
+    flex: 1 1 25rem;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2%;
+}
+
+/* Resizing the images  and styling them*/
+.steps .box-container .box img{
+    width: 90%;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+}
+
+.steps .box-container .box h3{
+    font-size: 2.4rem;
+    color: #130f40;
+    padding: 1rem;
+}
+
+/* the section of flowers of month starts from here */
+
+/* giving the months container as grid */
+.flowers .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 2.5rem;
+}
+
+/* Why making the position relative here */
+.flowers .box-container .box{
+    padding: 0 2.5rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.flowers .box-container .box img{
+    height: 29rem;
+}
+/* hovering on the images makes them scale up by 1.1 */
+.flowers .box-container .box:hover img{
+    transform: scale(1.1);
+}
+
+.flowers .box-container .box h3{
+    margin-top: 2%;
+    font-size: 2.5rem;
+    color: #130f40;
+    line-height: 1.8;
+}
+.flowers .box-container .box p{
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+.flowers .box-container .box .stars{
+    padding: 1rem 0;
+}
+.flowers .box-container .box .stars i{
+    font-size: 1.7rem;
+    color: gold;
+}
+.flowers .box-container .box .price{
+    color: #130f40;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    margin-right: 1rem;
+}
+/* Price ko katne k liye */
+.flowers .box-container .box .price span{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: goldenrod;
+    text-decoration: line-through;
+}
+
+/* The footer section starts from here */
+.footer{
+    background: whitesmoke;
+    text-align: center;
+}
+
+/* Making the footer container grid */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: #130f40;
+    padding: 1rem 0;
+}
+/* Paras ko extra size and line height provide kari h */
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .share{
+    margin-top: 1rem;   
+}
+.footer .box-container .box .share a{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 10%;
+    font-size: 1.8rem;
+    border: 0.1rem solid #130f40;
+    color: #130f40;
+    margin-right: 0.3rem;
+    text-align: center;
+}
+
+.footer .box-container .box .share a:hover{
+    background: #130f40;
+    color: aliceblue;
+}
+.footer .box-container .box .link{
+    font-size: 1.7rem;
+    line-height: 2;
+    color: #130f40;
+    padding: .5rem 0;
+    display: block;
+    text-decoration: none;
+}
+.footer .box-container .box .link:hover{
+    color: goldenrod;
+}
+.footer .credit{
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #666;
+    border-top: 2px solid #666;
+}
+
+.footer .credit span{
+    color: goldenrod;
+}
+
+

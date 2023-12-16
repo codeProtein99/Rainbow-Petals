@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}" />
+    <style>
+        .card img {
+            width: 36%; /* Adjust the width to your desired size */
+            height: auto;
+        }
+        #cartContainer{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            text-align: center;
+            gap: 2;
+            padding: 14%;
+        }
+        .card{
+            border: 1px solid #130f40;;
+            border-radius: 8px;
+            padding: 10px;
+            width: 30%;
+            box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+            background-color: rgb(231, 215, 243);
+        }
+    </style>
+</head>
+<body>
+    <!-- header section starts -->
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-snowflake"></i>Rainbow Petals</a>
+
+        <nav class="navbar">
+            <a href="index.html" th:href="@{index}">home</a>
+            <a href="products.html" th:href="@{products}">Products</a>
+            <a href="">Track</a>
+            <a href="about.html" th:href="@{about}">About</a>
+        </nav>
+
+        <div class="icons">
+            <div id="cart" class="fas fa-shopping-cart"></div>
+            <div id="login" class="fas fa-user"></div>
+            <div id="menu" class="fas fa-bars"></div>
+        </div>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart0.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart1.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart2.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <h3 class="total">total: 156.32</h3>
+            <a href="#" class="btn">Checkout Cart</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <input type="email" name="" id="" placeholder="enter your email" class="box">
+            <input type="password" name="" id="" placeholder="enter your email" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="login" class="btn">
+        </form>
+
+    </header>
+    <!-- header section end -->
+    <div id="cartContainer"></div>
+    <script src="" th:src="@{js/fetchCart.js}"></script>
+</body>
+</html>

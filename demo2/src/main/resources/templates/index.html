@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}" />
+</head>
+<body>
+    <!-- header section starts -->
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-snowflake"></i>Rainbow Petals</a>
+
+        <nav class="navbar">
+            <a href="index.html" th:href="@{index}">home</a>
+            <a href="products.html" th:href="@{products}">Products</a>
+            <a href="">Track</a>
+            <a href="" th:href="@{login}">Login</a>
+            <a href="about.html" th:href="@{about}">About</a>
+        </nav>
+
+        <div class="icons">
+            <div id="cart" class="fas fa-shopping-cart"></div>
+            <div id="login" class="fas fa-user"></div>
+            <div id="menu" class="fas fa-bars"></div>
+        </div>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart0.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart1.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart2.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <h3 class="total">total: 156.32</h3>
+            <a href="#" class="btn">Checkout Cart</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <input type="email" name="" id="" placeholder="enter your email" class="box">
+            <input type="password" name="" id="" placeholder="enter your email" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="login" class="btn">
+        </form>
+
+    </header>
+    <!-- header section end -->
+
+    <!-- Home section start -->
+    <section class="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" th:style="'background-image: url(\'' + @{/image/Slide1.jpg} + '\');'">
+                    <div class="content">
+                        <h3>the <span>fragrance</span> is just beautiful</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" th:style="'background-image: url(\'' + @{/image/Slide2.jpg} + '\');'">
+                    <div class="content">
+                        <h3>the <span>fragrance</span> is just beautiful</h3>
+                        <a href="#" class="btn" th:href="@{products}">order now</a>
+                    </div>
+                </div>
+                <div class="swiper-slide slide" th:style="'background-image: url(\'' + @{/image/Slide3.jpg} + '\');'">
+                    <div class="content">
+                        <h3>the <span>fragrance</span> is just beautiful</h3>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <!-- Home section end -->
+
+    <!-- Banner section start -->
+    <section class="banner">
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img  alt="" th:src="@{image/Flower_image1.webp}">
+                </div>
+                <div class="content">
+                    <h3>flower1</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img alt="" th:src="@{image/Flower_image2.webp}">
+                </div>
+                <div class="content">
+                    <h3>flower2</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img alt="" th:src="@{image/Flower_image3.webp}">
+                </div>
+                <div class="content">
+                    <h3>flower3</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img alt="" th:src="@{image/Flower_image4.webp}">
+                </div>
+                <div class="content">
+                    <h3>flower4</h3>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Banner section end -->
+    <section class="steps">
+        <h1 class="title">How it <span>works</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img alt="" th:src="@{image/Flower_variety.jpg}">
+                <h3>Choose your occasion</h3>
+            </div>
+            <div class="box">
+                <img alt="" th:src="@{image/Delivery_guy.jpg}">
+                <h3>Flowers at your doorsetp</h3>
+            </div>
+            <div class="box">
+                <img alt="" th:src="@{image/Payment.jpg}">
+                <h3>Easy payments</h3>
+            </div>
+            <div class="box">
+                <img alt="" th:src="@{image/familTime.jpg}">
+                <h3>Enjoy the occsion</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- flower menu starts here -->
+    <section class="flowers">
+        <h1 class="title">flowers of the <span>month</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <img alt="" th:src="@{image/Order_of_month_1.webp}">
+                <h3>pink extravagant</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, molestiae.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs.710 <span>Rs.629</span></div>
+                <a href="#" class="btn" th:href="@{products}">add to cart</a>
+            </div>
+            <div class="box">
+                <img alt="" th:src="@{image/Order_of_month_2.webp}">
+                <h3>pink extravagant</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, molestiae.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs.500 <span>Rs.349</span></div>
+                <a href="#" class="btn" th:href="@{products}">add to cart</a>
+            </div>
+            <div class="box">
+                <img alt="" th:src="@{image/Order_of_month_3.webp}">
+                <h3>pink extravagant</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, molestiae.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rs.400 <span>Rs.259</span></div>
+                <a href="#" class="btn" th:href="@{products}">add to cart</a>
+            </div>
+            
+        </div>
+    </section>
+    <!-- flower menu ends here -->
+    
+    <!-- footer starts here -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3 class="box">Find us here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, ea!</p>
+                <div class="share">
+                    <a href="" class="fab fa-facebook-f"></a>
+                    <a href="" class="fab fa-twitter"></a>
+                    <a href="" class="fab fa-instagram"></a>
+                    <a href="" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>contact us</h3>
+                <p>+124-3424-3423</p>
+                <a href="#" class="link">paritoshk1999@gmail.com</a>
+            </div>
+            <div class="box">
+                <h3>localization</h3>
+                <p>house no. 334 sector 9 <br>
+                Indira Nagar, Lucknow
+                </p>
+            </div>
+        </div>
+        <div class="credit">created by <span>Paritosh Kumar</span> | all rightd reserved</div>
+    </section>
+    <!-- footer ends here -->
+
+    <!-- swiper cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Custom js link -->
+    <script src="" th:src="@{js/script1.js}"></script>
+</body>
+</html>

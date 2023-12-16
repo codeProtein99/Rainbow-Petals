@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}" />
+    <style>
+        body{
+            text-align: center;
+        }
+        .button-container{
+            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button-container a{
+            padding: 0.9rem 1.3rem;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 8rem;">Thank You</h1>
+    <div class="button-container">
+        <a href="#" th:href="@{login}" class="btn">Head To Login Page</a>
+    </div>
+</body>
+</html>

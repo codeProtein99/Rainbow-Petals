@@ -1,0 +1,78 @@
+/* Only for styling the title */
+.menu .slide .title{
+    padding: 1rem;
+    font-size: 3rem;
+    color: aliceblue;
+    background: goldenrod;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+/* making the apprearence of the items there as flexed */
+.menu .slide .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+/* This is used to make the menu into the way it is like the way its in a darker table format that */
+.menu .slide .box-container .box{
+    flex: 1 1 38rem;
+    background: #eee;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+/* The menu card and the heading are made larger by this */
+.menu .slide .box-container .box h3{
+    font-size: 2.2rem;
+    color: #130f40;
+    padding-bottom: 0.5rem;
+}
+/* To style the information written  */
+.menu .slide .box-container .box p{
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 2;
+}
+/* To style the prices */
+.menu .slide .box-container .box .price{
+    font-size: 2.2rem;
+    color: goldenrod;
+}
+/* Here when we hover the sizing or the scaling of the table will become small */
+.menu .slide .box-container .box:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+/* Here We will style the Products page me add to cart wala  */
+/* We made the box to appear at top of the page and be translucent and take 100% of page dimensions */
+.menu-preview-container{
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1100;
+    /* Rn keeping the display none and then making it appear later */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+/* Here We gave the box content some pading and white background so its prominentlt visibe */
+.menu-preview-container .menu-preview{
+    text-align: center;
+    background: aliceblue;
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+    display: none;
+    width: 35rem;
+}
+
+.menu-preview-container .menu-preview.active{
+    display: inline-block;
+}

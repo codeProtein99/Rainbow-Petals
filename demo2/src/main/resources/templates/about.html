@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/aboutStyle.css}" />
+</head>
+<body>
+        <!-- header section starts -->
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-snowflake"></i>Rainbow Petals</a>
+
+        <nav class="navbar">
+            <a href="index.html" th:href="@{index}">home</a>
+            <a href="products.html" th:href="@{products}">Products</a>
+            <a href="">Track</a>
+            <a href="">Login</a>
+            <a href="about.html" th:href="@{about}">About</a>
+        </nav>
+
+        <div class="icons">
+            <div id="cart" class="fas fa-shopping-cart"></div>
+            <div id="login" class="fas fa-user"></div>
+            <div id="menu" class="fas fa-bars"></div>
+        </div>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart0.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart1.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart2.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <h3 class="total">total: 156.32</h3>
+            <a href="#" class="btn">Checkout Cart</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <input type="email" name="" id="" placeholder="enter your email" class="box">
+            <input type="password" name="" id="" placeholder="enter your email" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="login" class="btn">
+        </form>
+
+    </header>
+    <!-- header section end -->
+
+       
+    <div class="heading" th:style="'background-image: url(\'' + @{/image/Slide1.jpg} + '\');'">
+        <h1>our products</h1>
+        <p><a href="home.html" th:href="@{index}">home>>></a> About</p>
+    </div>
+
+        <!-- about section starts here -->
+        <section class="about">
+            <div class="row">
+                <div class="image">
+                    <img alt="" th:src="@{image/cart3.jpg}">
+                </div>
+                <div class="content">
+                    <h3>welcome to our <span>flower</span> shop</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam repudiandae perferendis distinctio nesciunt minus itaque repellat sequi ratione ducimus, eum temporibus suscipit reprehenderit possimus enim, rerum explicabo! Sit, sapiente sunt!</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam repudiandae perferendis distinctio nesciunt minus itaque repellat sequi ratione ducimus, eum temporibus suscipit reprehenderit possimus enim, rerum explicabo! Sit, sapiente sunt!</p>
+                    <a href="#"class="btn">read more</a>
+                </div>
+            </div>
+        </section>
+        <!-- about section ends here -->
+
+        <!-- blog section starts here -->
+        <section class="blogs">
+            <h1 class="title">our <span>blogs</span></h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img alt="" th:src="@{image/cart0.jpg}">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i> 05 June, 2023</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                    <h3>Flower of Worships: Blah Blah</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, est!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+                <div class="box">
+                    <img alt="" th:src="@{image/cart1.jpg}">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i> 05 June, 2023</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                    <h3>Flower of Worships: Blah Blah</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, est!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+                <div class="box">
+                    <img alt="" th:src="@{image/cart2.jpg}">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-calendar"></i> 05 June, 2023</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                    <h3>Flower of Worships: Blah Blah</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, est!</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+
+            </div>
+        </section>
+        <!-- blog section ends here -->
+
+        <!-- footer starts here -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3 class="box">Find us here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, ea!</p>
+                <div class="share">
+                    <a href="" class="fab fa-facebook-f"></a>
+                    <a href="" class="fab fa-twitter"></a>
+                    <a href="" class="fab fa-instagram"></a>
+                    <a href="" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>contact us</h3>
+                <p>+124-3424-3423</p>
+                <a href="#" class="link">paritoshk1999@gmail.com</a>
+            </div>
+            <div class="box">
+                <h3>localization</h3>
+                <p>house no. 334 sector 9 <br>
+                Indira Nagar, Lucknow
+                </p>
+            </div>
+        </div>
+        <div class="credit">created by <span>Paritosh Kumar</span> | all rightd reserved</div>
+    </section>
+    <!-- footer ends here -->
+    
+    <script src="" th:src="@{js/script1.js}"></script>
+</body>
+</html>

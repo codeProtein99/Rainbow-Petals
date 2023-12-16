@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg, rgba(155, 89, 182, 0.4), rgba(255, 255, 255, 0.4));
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-wrapper {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 40px;
+      width: 400px;
+      border: 1px solid #130f40;
+    }
+
+    h1 {
+      text-align: center;
+      color: #130f40;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      color: #555555;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      border: 3px solid #130f40;
+      background-color: goldenrod;
+      opacity: 0.85;
+      color: #130f40;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin: 0% 40%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #130f40;
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-wrapper">
+      <h1>Add It Up</h1>
+      <form id="productAddFrom" action="/addProduct" method="post">
+        <label for="productName">Enter The Product:</label>
+        <input type="text" id="productName" name="productName" required>
+        
+        <label for="quantity">Enter The Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required>
+
+        <label for="shopName">Enter The Shop:</label>
+        <input type="text" id="shopName" name="shopName"  required>
+
+        <label for="message">Product Description:</label>
+        <textarea id="message" name="message" rows="4" cols="5" style="width: 100%;"></textarea>
+
+
+        <label for="prodPrice">Enter The Price:</label>
+        <input type="number" id="prodPrice" name="prodPrice" required>
+
+        <label for="imageURL">Enter Image URL:</label>
+        <input type="text" id="imageURL" name="imageURL" required>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/script1.js" th:src="@{js/script1.js}"></script>
+</body>
+</html>

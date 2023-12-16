@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}" />
+    <!-- swiper cdn link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="" th:href="@{/css/aboutStyle.css}" />
+    <link rel="stylesheet" href="" th:href="@{/css/productsStyle.css}" />
+    <style>
+        .button-container{
+            text-align: center;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button-container a{
+            padding: 0.9rem 1.3rem;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- header section starts -->
+    <header class="header">
+        <a href="index.html" class="logo"> <i class="fas fa-snowflake"></i>Rainbow Petals</a>
+
+        <nav class="navbar">
+            <!-- <a href="index.html" th:href="@{index}">home</a>
+            <a href="products.html" th:href="@{products}">Products</a>
+            <a href="">Track</a>
+            <a href="">Logout</a>
+            <a href="about.html" th:href="@{about}">About</a> -->
+            <a href="" th:href="@{login}">Logout</a>
+        </nav>
+
+        <div class="icons">
+            <div id="cart" class="fas fa-shopping-cart"></div>
+            <div id="login" class="fas fa-user"></div>
+            <div id="menu" class="fas fa-bars"></div>
+        </div>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart0.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart1.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="" alt="" th:src="@{image/cart2.jpg}" />
+                <div class="content">
+                    <h3>flower</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">X</span>
+                    <span class="price">$</span>
+                </div>
+            </div>
+            <h3 class="total">total: 156.32</h3>
+            <a href="#" class="btn">Checkout Cart</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <input type="email" name="" id="" placeholder="enter your email" class="box">
+            <input type="password" name="" id="" placeholder="enter your email" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="login" class="btn">
+        </form>
+
+    </header>
+    <!-- header section end -->
+
+    <div class="heading" th:style="'background-image: url(\'' + @{/image/Slide1.jpg} + '\');'">
+        <h1>Welcome back, Admin</h1>
+        <p><a href="home.html">home>>></a> Menu</p>
+    </div>
+
+    <div class="button-container">
+        <a href="#" th:href="@{/productsPage}" class="btn">My Products</a>
+        <a href="#" th:href="@{/productAdd}" class="btn">Add Products</a>
+    </div>
+
+       <!-- swiper predef js script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="" th:src="@{js/script1.js}"></script>
+</body>
+</html>

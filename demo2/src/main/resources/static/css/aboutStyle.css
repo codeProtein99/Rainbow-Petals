@@ -1,0 +1,95 @@
+/* Inside the row the content and the image divs will be flexed here but still we need to set the inside divs 
+that how they will be aligned  */
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+/* NO change here still why?? */
+.about .row .image{
+    flex: 1 1 32rem;
+} 
+/* Here we have only defined the dimensions of the left flex item  */
+
+.about .row .image img{
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+/* Here above , we have given the width of the image to be 100% of the containing box */
+
+/* Now after determininng the width of the 2nd flex item the items will be sitting properly  */
+.about .row .content{
+    flex: 1 1 50rem;
+}
+/* Rest all is just giving appropriate sizes to the valriables */
+.about .row .content h3{
+    font-size: 3.5rem;
+    color: #130f40;
+}
+ 
+.about .row .content h3 span{
+    color: goldenrod;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 2rem 0;
+    line-height: 2rem;
+} 
+
+/* Here We are gonna style the blog pages here  */
+
+/* Here we have given the box container the grid property so that all the boxes can be later arranged into grid  */
+.blogs .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 4rem;
+}
+
+.blogs .box-container .box{
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 0.5px solid rgb(240, 219, 192);
+}
+
+.blogs .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.blogs .box-container .box .icons{
+    background: goldenrod;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    top: -2rem;
+    display: inline-block;
+} 
+/* Here We have just colored the inside headings and dates  */
+.blogs .box-container .box .icons a{
+    font-size: 1.4rem;
+    color: aliceblue;
+    margin: 0 1rem;
+}
+.blogs .box-container .box .icons a:hover{
+    color: #130f40;
+}
+.blogs .box-container .box .icons a i{
+    color: #130f40;
+    padding-right: 0.5rem;
+}
+.blogs .box-container .box h3{
+    font-size: 2rem;
+    color: #130f40;
+}
+.blogs .box-container .box p{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: #666;
+}

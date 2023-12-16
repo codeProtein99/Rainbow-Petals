@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg, rgba(155, 89, 182, 0.4), rgba(255, 255, 255, 0.4));
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-wrapper {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 40px;
+      width: 400px;
+      border: 1px solid #130f40;
+    }
+
+    h1 {
+      text-align: center;
+      color: #130f40;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      color: #555555;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      border: 3px solid #130f40;
+      background-color: goldenrod;
+      opacity: 0.85;
+      color: #130f40;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin: 0% 40%;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #130f40;
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-wrapper">
+      <h1>Sign Up</h1>
+      <form id="loginForm" action="/register" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <label for="middleName">Middle Name:</label>
+        <input type="text" id="middleName" name="middleName" required>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="email">E-mail Id:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="" th:src="@{js/script1.js}"></script>
+</body>
+</html>
